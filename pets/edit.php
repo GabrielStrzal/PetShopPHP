@@ -63,6 +63,10 @@ include_once("pets_menu.php");
 
 <br><br><br>
 
+
+	<div class="container">
+		<div class="col-md-12">
+
 	<a href="../index.php">Home</a>
 	<br/><br/>
 	
@@ -86,5 +90,7 @@ include_once("pets_menu.php");
 			</tr>
 		</table>
 	</form>
+	</div>
+	</div>
 </body>
 </html>

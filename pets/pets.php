@@ -23,6 +23,10 @@ include_once("pets_menu.php");
 ?>
 <br><br><br>
 
+	<div class="container">
+		<div class="col-md-12">
+
+
 <a href="adiciona.php">Adicionar novo Pet</a><br/><br/>
 
 	<table width='80%' border=0>
@@ -44,5 +48,7 @@ include_once("pets_menu.php");
 	}
 	?>
 	</table>
+	</div>
+	</div>
 </body>
 </html>

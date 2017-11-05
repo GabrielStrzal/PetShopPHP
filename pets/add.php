@@ -15,6 +15,10 @@ include_once("pets_menu.php");
 
 <br><br><br>
 
+
+	<div class="container">
+		<div class="col-md-12">
+
 <?php
 //including the database connection file
 include_once("../config/config.php");
@@ -53,5 +57,8 @@ if(isset($_POST['Submit'])) {
 	}
 }
 ?>
+
+</div>
+</div>
 </body>
 </html>
