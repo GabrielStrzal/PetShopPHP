@@ -35,7 +35,7 @@ include_once("pets_menu.php");
 		<td>Nome</td>
 		<td>Descrição</td>
 		<td>Tipo</td>
-		<td>Update</td>
+		<td>Ações</td>
 	</tr>
 	<?php 
 	//while($res = mysql_fetch_array($result)) { // mysql_fetch_array is deprecated, we need to use mysqli_fetch_array 
@@ -44,7 +44,7 @@ include_once("pets_menu.php");
 		echo "<td>".$res['nome']."</td>";
 		echo "<td>".$res['descricao']."</td>";
 		echo "<td>".$res['tipo']."</td>";	
-		echo "<td><a href=\"edit.php?id=$res[id]\">Edit</a> | <a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";		
+		echo "<td><a href=\"edit.php?id=$res[id]\">Editar</a> | <a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Tem certeza de que deseja deletar?')\">Deletar</a></td>";		
 	}
 	?>
 	</table>

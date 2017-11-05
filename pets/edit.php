@@ -86,7 +86,7 @@ include_once("pets_menu.php");
 			</tr>
 			<tr>
 				<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
-				<td><input type="submit" name="update" value="Update"></td>
+				<td><input type="submit" name="update" value="Atualizar"></td>
 			</tr>
 		</table>
 	</form>

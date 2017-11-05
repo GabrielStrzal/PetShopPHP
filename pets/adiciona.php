@@ -19,8 +19,7 @@ include_once("pets_menu.php");
 	<div class="container">
 		<div class="col-md-12">
 
-	<a href="../index.php">Home</a>
-	<br/><br/>
+<br/>
 
 	<form action="add.php" method="post" name="form1">
 		<table width="25%" border="0">
@@ -38,7 +37,7 @@ include_once("pets_menu.php");
 			</tr>
 			<tr> 
 				<td></td>
-				<td><input type="submit" name="Submit" value="Add"></td>
+				<td><input type="submit" name="Submit" value="Adicionar"></td>
 			</tr>
 		</table>
 	</form>
