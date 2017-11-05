@@ -1,6 +1,6 @@
 <?php
 // including the database connection file
-include_once("config.php");
+include_once("../config/config.php");
 
 if(isset($_POST['update']))
 {	
@@ -15,22 +15,22 @@ if(isset($_POST['update']))
 	if(empty($nome) || empty($descricao) || empty($tipo)) {	
 			
 		if(empty($nome)) {
-			echo "<font color='red'>Name field is empty.</font><br/>";
+			echo "<font color='red'>Campo Nome está vazio.</font><br/>";
 		}
 		
 		if(empty($descricao)) {
-			echo "<font color='red'>Age field is empty.</font><br/>";
+			echo "<font color='red'>Campo Descrição está vazio.</font><br/>";
 		}
 		
 		if(empty($tipo)) {
-			echo "<font color='red'>Email field is empty.</font><br/>";
+			echo "<font color='red'>Campo Tipo está vazio.</font><br/>";
 		}		
 	} else {	
 		//updating the table
 		$result = mysqli_query($mysqli, "UPDATE pets SET nome='$nome',descricao='$descricao',tipo='$tipo' WHERE id=$id");
 		
 		//redirectig to the display page. In our case, it is index.php
-		header("Location: index.php");
+		header("Location: pets.php");
 	}
 }
 ?>
@@ -50,7 +50,7 @@ while($res = mysqli_fetch_array($result))
 ?>
 <?php
 // including the header file
-include_once("header.php");
+include_once("../header.php");
 ?> 
 	<title>Edit Data</title>
 </head>
@@ -58,12 +58,12 @@ include_once("header.php");
 <body>
 <?php
 // including the menu file
-include_once("menu.php");
+include_once("pets_menu.php");
 ?>
 
 <br><br><br>
 
-	<a href="index.php">Home</a>
+	<a href="../index.php">Home</a>
 	<br/><br/>
 	
 	<form name="form1" method="post" action="edit.php">

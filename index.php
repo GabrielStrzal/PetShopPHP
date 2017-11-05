@@ -21,6 +21,8 @@ include_once("menu.php");
 			<h2>S</h2>
 			<h1>Bem-vindo ao Sistema de Gerenciamento de Pets</h1>
 		</div>
+
+
 	</div>
 </body>
 </html>

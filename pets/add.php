@@ -1,6 +1,6 @@
 <?php
 // including the header file
-include_once("header.php");
+include_once("../header.php");
 ?> 
 	<title>Adicionar Pet</title>
 </head>
@@ -10,14 +10,14 @@ include_once("header.php");
 
 <?php
 // including the menu file
-include_once("menu.php");
+include_once("pets_menu.php");
 ?>
 
 <br><br><br>
 
 <?php
 //including the database connection file
-include_once("config.php");
+include_once("../config/config.php");
 
 if(isset($_POST['Submit'])) {	
 	$nome = mysqli_real_escape_string($mysqli, $_POST['nome']);

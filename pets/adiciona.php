@@ -1,6 +1,6 @@
 <?php
 // including the header file
-include_once("header.php");
+include_once("../header.php");
 ?> 
 
 	<title>Adicionar Pet</title>
@@ -10,12 +10,12 @@ include_once("header.php");
 
 <?php
 // including the menu file
-include_once("menu.php");
+include_once("pets_menu.php");
 ?>
 
 <br><br>
 <br>
-	<a href="index.php">Home</a>
+	<a href="../index.php">Home</a>
 	<br/><br/>
 
 	<form action="add.php" method="post" name="form1">

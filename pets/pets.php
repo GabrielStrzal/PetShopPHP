@@ -1,6 +1,6 @@
 <?php
 //including the database connection file
-include_once("config.php");
+include_once("../config/config.php");
 
 //fetching data in descending order (lastest entry first)
 //$result = mysql_query("SELECT * FROM users ORDER BY id DESC"); // mysql_query is deprecated
@@ -9,7 +9,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM pets ORDER BY id DESC"); // using
 
 <?php
 // including the header file
-include_once("header.php");
+include_once("../header.php");
 ?>
 
 	<title>Página Inicial</title>
@@ -19,7 +19,7 @@ include_once("header.php");
 
 <?php
 // including the menu file
-include_once("menu.php");
+include_once("pets_menu.php");
 ?>
 <br><br><br>
 

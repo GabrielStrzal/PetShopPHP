@@ -1,6 +1,6 @@
 <?php
 //including the database connection file
-include("config.php");
+include("../config/config.php");
 
 //getting id of the data from url
 $id = $_GET['id'];
@@ -9,6 +9,6 @@ $id = $_GET['id'];
 $result = mysqli_query($mysqli, "DELETE FROM pets WHERE id=$id");
 
 //redirecting to the display page (index.php in our case)
-header("Location:index.php");
+header("Location:../index.php");
 ?>
 
