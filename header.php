@@ -1,6 +1,8 @@
 <?php
 // Inclui o arquivo de configuração
+
 include('config/config.php');
+
 
 /*
 // Inclui o arquivo de verificação de login

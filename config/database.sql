@@ -2,12 +2,25 @@ create database petshop;
 
 use petshop;
 
+
+DROP TABLE IF EXISTS `pets`;
+
 CREATE TABLE pets (
 id INTEGER AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(20) NOT NULL,
 descricao TEXT,
 datanasc DATE,
 tipo TEXT
+);
+
+
+DROP TABLE IF EXISTS `donos`;
+
+CREATE TABLE donos (
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(20) NOT NULL,
+endereco TEXT,
+telefone TEXT
 );
 
 
@@ -20,3 +33,5 @@ CREATE TABLE `usuarios` (
   `user_password` varchar(255) NOT NULL COMMENT 'Senha',
   PRIMARY KEY (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+

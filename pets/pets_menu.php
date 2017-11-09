@@ -1,4 +1,8 @@
 	<!-- Fixed navbar -->
+<?php
+   include('session.php');
+?>
+
 
 <nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container">
@@ -14,8 +18,8 @@
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="../index.php">Home</a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
+				<li class=""><a href="../index.php">Home</a></li>
+				<li class="dropdown active"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">Pets <span class="caret"></span></a>
 					<ul class="dropdown-menu">
@@ -27,8 +31,8 @@
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">Donos <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Cadastro de Donos</a></li>
-						<li><a href="#">Lista</a></li>
+						<li><a href="../donos/adiciona.php">Cadastro de Donos</a></li>
+						<li><a href="../donos/donos.php">Lista</a></li>
 					</ul>
 				</li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
@@ -51,7 +55,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">Sobre</a></li>
 				<li><a href="#">Contato</a></li>
-				<li><a href="login/sair.php">Sair</a></li>
+				<li><a href="../logout.php">Sair</a></li>
 			</ul>
 
 			<!--/.nav-collapse -->
