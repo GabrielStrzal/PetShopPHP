@@ -19,12 +19,12 @@
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
 				<li class=""><a href="../index.php">Home</a></li>
-				<li class="dropdown active"><a href="#" class="dropdown-toggle"
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">Pets <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="adiciona.php">Cadastro de Pets</a></li>
-						<li><a href="pets.php">Listar Pets</a></li>
+						<li><a href="../pets/adiciona.php">Cadastro de Pets</a></li>
+						<li><a href="../pets/pets.php">Listar Pets</a></li>
 					</ul>
 				</li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
@@ -35,12 +35,12 @@
 						<li><a href="../donos/donos.php">Lista</a></li>
 					</ul>
 				</li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
+				<li class="dropdown active"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">Admin <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="../users/adiciona.php">Cadastro de Usuários</a></li>
-						<li><a href="../users/usuarios.php">Lista de Usuários</a></li>
+						<li><a href="adiciona.php">Cadastro de Usuários</a></li>
+						<li><a href="usuarios.php">Lista de Usuários</a></li>
 					</ul>
 				</li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"

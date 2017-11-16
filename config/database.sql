@@ -10,7 +10,8 @@ id INTEGER AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(20) NOT NULL,
 descricao TEXT,
 datanasc DATE,
-tipo TEXT
+tipo TEXT,
+dono INTEGER
 );
 
 
@@ -24,14 +25,15 @@ telefone TEXT
 );
 
 
-DROP TABLE IF EXISTS `usuarios`;
-
-CREATE TABLE `usuarios` (
-  `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID do Usuário',
-  `user` varchar(255) NOT NULL COMMENT 'Usuário',
-  `user_name` varchar(255) NOT NULL COMMENT 'Nome do usuário',
-  `user_password` varchar(255) NOT NULL COMMENT 'Senha',
-  PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
+DROP TABLE IF EXISTS `admin`
+CREATE TABLE admin
+(
+id INT PRIMARY KEY AUTO_INCREMENT,
+username VARCHAR(30) UNIQUE,
+passcode VARCHAR(30),
+tipo VARCHAR(30)
+);
+
+insect 

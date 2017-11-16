@@ -39,8 +39,8 @@
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">Admin <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Cadastro de Usuários</a></li>
-						<li><a href="#">Lista de Usuários</a></li>
+						<li><a href="../users/adiciona.php">Cadastro de Usuários</a></li>
+						<li><a href="../users/usuarios.php">Lista de Usuários</a></li>
 					</ul>
 				</li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
