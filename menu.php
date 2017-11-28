@@ -60,7 +60,7 @@
 				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Sobre</a></li>
+				<li><a href="sobre.php">Sobre</a></li>
 				<li><a href="logout.php">Sair</a></li>
 			</ul>
 
