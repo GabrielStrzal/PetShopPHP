@@ -65,31 +65,29 @@ include_once("donos_menu.php");
 
 
 	<div class="container">
-		<div class="col-md-12">
-
-	<br/>
+		<br>
+			<div class="col-md-6 container panel panel-default ">
+				<h3>Edita Dono</h3>
+				<br/>
 	
-	<form name="form1" method="post" action="edit.php">
-		<table border="0">
-			<tr> 
-				<td>Nome</td>
-				<td><input type="text" name="nome" value="<?php echo $nome;?>"></td>
-			</tr>
-			<tr> 
-				<td>Endereço</td>
-				<td><input type="text" name="endereco" value="<?php echo $endereco;?>"></td>
-			</tr>
-			<tr> 
-				<td>Telefone</td>
-				<td><input type="text" name="telefone" value="<?php echo $telefone;?>"></td>
-			</tr>
-			<tr>
-				<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
-				<td><input type="submit" name="update" value="Atualizar"></td>
-			</tr>
-		</table>
-	</form>
-	</div>
+				<form name="form1" method="post" action="edit.php">
+					<div class="form-group">
+						<label for="nome">Nome</label>
+					 	<input type="text" class="form-control" name="nome" id="nome" value="<?php echo $nome;?>">
+			  		</div>
+					<div class="form-group">
+						<label for="endereco">Endereço</label>
+					 	<input type="text" class="form-control" name="endereco" id="endereco" value="<?php echo $endereco;?>">
+			  		</div>	
+					<div class="form-group">
+						<label for="telefone">Telefone</label>
+					 	<input type="text" class="form-control" name="telefone" id="telefone" value="<?php echo $telefone;?>">
+			  		</div>	
+					<input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
+					<input type="submit" name="update" class="btn btn-success tn-lg btn-block" value="Atualizar">
+				</form>
+				<br>
+		</div>
 	</div>
 </body>
 </html>

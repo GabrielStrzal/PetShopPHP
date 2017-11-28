@@ -3,44 +3,47 @@
 include_once("../header.php");
 ?> 
 
-	<title>Adicionar Usuários</title>
+	<title>Adicionar Serviços</title>
 </head>
 
 <body>
 
 <?php
 // including the menu file
-include_once("usuarios_menu.php");
+include_once("servicos_menu.php");
 ?>
 
 <br><br>
 <br>
 
-<div class="container">
+	<div class="container">
 		<br>
 			<div class="col-md-6 container panel panel-default ">
 
-				<h3>Cadastro de Usuários</h3>
+				<h3>Cadastro de Serviços</h3>
 				<br/>
 
 				<form action="add.php" method="post" name="form1">
 					<div class="form-group">
-						<label for="username">Nome de Usuário</label>
-					 	<input type="text" class="form-control" name="username" id="username" placeholder="Nome">
+						<label for="nome">Nome</label>
+					 	<input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
 			  		</div>
 					<div class="form-group">
-						<label for="passcode">Senha</label>
-					 	<input type="password" class="form-control" name="passcode" id="passcode" placeholder="Senha">
+						<label for="descricao">Descrição</label>
+					 	<input type="text" class="form-control" name="descricao" id="descricao" placeholder="Descrição">
 			  		</div>		
 					<div class="form-group">
 						<label for="tipo">Tipo</label>
 						<select name="tipo" id="tipo" class="form-control">
 					  		<option value="">Selecione um tipo</option>
-			  				<option value="Administrativo">Administrativo</option>
-			  				<option value="Funcionário">Funcionário</option>
-			  				<option value="Médico Veterinário">Médico Veterinário</option>
+					  		<option value="Atendimento Médico">Atendimento Médico</option>
+					  		<option value="Atendimento Cosmético">Atendimento Cosmético</option>
 						</select>
 			  		</div>	
+					<div class="form-group">
+						<label for="preco">Preço</label>
+						<input type="text" class="form-control" name="preco" id="preco" placeholder="Preço"/>
+					</div>
 					<button type="submit" class="btn btn-success tn-lg btn-block" name="Submit" value="Adicionar">Adicionar</button>
 				</form>
 				<br/>

@@ -18,47 +18,55 @@ include_once("pets_menu.php");
 <br><br>
 <br>
 
-	<div class="container">
-		<div class="col-md-12">
+<div class="container">
+		<br>
+			<div class="col-md-6 container panel panel-default ">
 
-<br/>
+				<h3>Cadastro de Pets</h3>
+				<br/>
 
-	<form action="add.php" method="post" name="form1">
-		<table width="25%" border="0">
-			<tr> 
-				<td>Nome</td>
-				<td><input type="text" name="nome"></td>
-			</tr>
-			<tr> 
-				<td>Descrição</td>
-				<td><input type="text" name="descricao"></td>
-			</tr>
-			<tr> 
-				<td>Tipo</td>
-				<td><input type="text" name="tipo"></td>
-			</tr>
-			<tr>
-				<td>Dono</td>
-			<td>
-				<select name="dono">
-				<option value="">Selecione um Dono</option>
-					<?php 
-						while($res = mysqli_fetch_array($result_donos)) { 		
-							echo "<option value=".$res['id'].">".$res['nome']."</option>";	
-						}
-					?>
-				</select>
-			</td>
-
-			</tr>
-
-			<tr> 
-				<td></td>
-				<td><input type="submit" name="Submit" value="Adicionar"></td>
-			</tr>
-		</table>
-	</form>
-	</div>
+				<form action="add.php" method="post" name="form1">
+					<div class="form-group">
+						<label for="nome">Nome</label>
+					 	<input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
+			  		</div>
+					<div class="form-group">
+						<label for="descricao">Descrição</label>
+					 	<input type="text" class="form-control" name="descricao" id="descricao" placeholder="Descrição">
+			  		</div>		
+					<div class="form-group">
+						<label for="tipo">Tipo</label>
+						<select name="tipo" id="tipo" class="form-control">
+					  		<option value="">Selecione um tipo</option>
+					  		<option value="Cachorro">Cachorro</option>
+					  		<option value="Gato">Gato</option>
+					  		<option value="Outros">Outros</option>
+						</select>
+			  		</div>	
+					<div class="form-group">
+						<label for="sexo">Sexo</label>
+						<select name="sexo" id="sexo" class="form-control">
+					  		<option value="">Selecione um sexo</option>
+					  		<option value="Macho">Macho</option>
+					  		<option value="Fêmea">Fêmea</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="dono">Dono</label>
+						<select name="dono" id="dono" class="form-control">
+							<option value="">Selecione um Dono</option>
+							<?php 
+								while($res = mysqli_fetch_array($result_donos)) { 		
+									echo "<option value=".$res['id'].">".$res['nome']."</option>";	
+								}
+							?>
+						</select>
+					</div>
+					<button type="submit" class="btn btn-success tn-lg btn-block" name="Submit" value="Adicionar">Adicionar</button>
+				</form>
+				<br/>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

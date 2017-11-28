@@ -2,7 +2,7 @@
 // including the header file
 include_once("../header.php");
 ?> 
-	<title>Cadastrar Usuários</title>
+	<title>Adicionar Serviços</title>
 </head>
 
 <body>
@@ -10,7 +10,7 @@ include_once("../header.php");
 
 <?php
 // including the menu file
-include_once("usuarios_menu.php");
+include_once("servicos_menu.php");
 ?>
 
 <br><br><br>
@@ -24,23 +24,28 @@ include_once("usuarios_menu.php");
 include_once("../config/config.php");
 
 if(isset($_POST['Submit'])) {	
-	$username = mysqli_real_escape_string($mysqli, $_POST['username']);
-	$passcode = mysqli_real_escape_string($mysqli, $_POST['passcode']);
+	$nome = mysqli_real_escape_string($mysqli, $_POST['nome']);
+	$descricao = mysqli_real_escape_string($mysqli, $_POST['descricao']);
 	$tipo = mysqli_real_escape_string($mysqli, $_POST['tipo']);
+	$preco = mysqli_real_escape_string($mysqli, $_POST['preco']);
 		
 	// checking empty fields
-	if(empty($username) || empty($passcode) || empty($tipo)) {
+	if(empty($nome) || empty($descricao) || empty($tipo) || empty($preco)) {
 				
-		if(empty($username)) {
+		if(empty($nome)) {
 			echo "<font color='red'>Campo Nome está vazio.</font><br/>";
 		}
 		
-		if(empty($passcode)) {
-			echo "<font color='red'>Campo Senha está vazio.</font><br/>";
+		if(empty($descricao)) {
+			echo "<font color='red'>Campo Descrição está vazio.</font><br/>";
 		}
 		
 		if(empty($tipo)) {
 			echo "<font color='red'>Campo Tipo está vazio.</font><br/>";
+		}
+
+		if(empty($preco)) {
+			echo "<font color='red'>Campo Preço está vazio.</font><br/>";
 		}
 		
 		//link to the previous page
@@ -49,11 +54,11 @@ if(isset($_POST['Submit'])) {
 		// if all the fields are filled (not empty) 
 			
 		//insert data to database	
-		$result = mysqli_query($mysqli, "INSERT INTO admin(username,passcode,tipo) VALUES('$username','$passcode','$tipo')");
+		$result = mysqli_query($mysqli, "INSERT INTO servicos(nome,descricao,tipo,preco) VALUES('$nome','$descricao','$tipo','$preco')");
 		
 		//display success message
 		echo "<a href='#' class='btn btn-block btn-success disabled'>Adicionado com Sucesso.</a>";
-		echo "<br/><a href='usuarios.php' class='btn btn-primary'>Ver resultados</a>";
+		echo "<br/><a href='servicos.php' class='btn btn-primary'>Ver resultados</a>";
 	}
 }
 ?>

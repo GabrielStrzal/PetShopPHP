@@ -64,39 +64,35 @@ include_once("usuarios_menu.php");
 <br><br><br>
 
 
-	<div class="container">
-		<div class="col-md-12">
+<div class="container">
+		<br>
+			<div class="col-md-6 container panel panel-default ">
 
-	<br/>
+				<h3>Editar Usuário</h3>
+				<br/>
 	
 	<form name="form1" method="post" action="edit.php">
-		<table border="0">
-			<tr> 
-				<td>Nome</td>
-				<td><input type="text" name="username" value="<?php echo $username;?>"></td>
-			</tr>
-			<tr> 
-				<td>Senha</td>
-				<td><input type="password" name="passcode" value="<?php echo $passcode;?>"></td>
-			</tr>
-			<tr> 
-			
-			<td>Tipo</td>
-			<td>
-				<select name="tipo">
-			  		<option value="<?php echo $tipo;?>"><?php echo $tipo;?></option>
-			  		<option value="Administrativo">Administrativo</option>
-			  		<option value="Funcionário">Funcionário</option>
-			  		<option value="Médico Veterinário">Médico Veterinário</option>
-				</select>
-			</td>
-			</tr>
-			<tr>
-				<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
-				<td><input type="submit" name="update" value="Atualizar"></td>
-			</tr>
-		</table>
+		<div class="form-group">
+			<label for="username">Nome de Usuário</label>
+			<input type="text" class="form-control" name="username" id="username" value="<?php echo $username;?>">
+		</div>
+		<div class="form-group">
+			<label for="passcode">Senha</label>
+			<input type="password" class="form-control" name="passcode" id="passcode" value="<?php echo $passcode;?>">
+		</div>
+		<div class="form-group">
+			<label for="tipo">Tipo</label>
+			<select name="tipo" id="tipo" class="form-control">
+				<option value="<?php echo $tipo;?>"><?php echo $tipo;?></option>
+				<option value="Administrativo">Administrativo</option>
+				<option value="Funcionário">Funcionário</option>
+				<option value="Médico Veterinário">Médico Veterinário</option>
+			</select>
+		</div>
+		<input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
+		<input type="submit" name="update" value="Atualizar" class="btn btn-success tn-lg btn-block" >
 	</form>
+	<br>
 	</div>
 	</div>
 </body>

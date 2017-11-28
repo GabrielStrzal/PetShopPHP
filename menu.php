@@ -45,14 +45,22 @@
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">Serviços <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Atendimento Médico</a></li>
-						<li><a href="#">Atendimento Cosmético</a></li>
+						<li class="dropdown-header">Atendimento Médico</li>
+						<li><a href="../atendimentomedico/adiciona.php">Cadastrar</a></li>
+						<li><a href="../atendimentomedico/atendimentomedico.php">Listar</a></li>
+						 <li class="divider"></li>
+						 <li class="dropdown-header">Atendimento Cosmético</li>
+						<li><a href="../atendimentocos/adiciona.php">Cadastrar</a></li>
+						<li><a href="../atendimentocos/atendimentocos.php">Listar</a></li>
+						 <li class="divider"></li>
+						 <li class="dropdown-header">Serviços</li>
+						<li><a href="servicos/adiciona.php">Cadastrar</a></li>
+						<li><a href="servicos/servicos.php">Listar</a></li>
 					</ul>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">Sobre</a></li>
-				<li><a href="#">Contato</a></li>
 				<li><a href="logout.php">Sair</a></li>
 			</ul>
 

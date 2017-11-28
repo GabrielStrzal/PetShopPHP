@@ -11,7 +11,8 @@ nome VARCHAR(20) NOT NULL,
 descricao TEXT,
 datanasc DATE,
 tipo TEXT,
-dono INTEGER
+dono INTEGER,
+sexo TEXT
 );
 
 
@@ -27,7 +28,7 @@ telefone TEXT
 
 
 
-DROP TABLE IF EXISTS `admin`
+DROP TABLE IF EXISTS `admin`;
 CREATE TABLE admin
 (
 id INT PRIMARY KEY AUTO_INCREMENT,
@@ -36,4 +37,16 @@ passcode VARCHAR(30),
 tipo VARCHAR(30)
 );
 
-insect 
+
+
+DROP TABLE IF EXISTS `servicos`;
+
+CREATE TABLE servicos (
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(20) NOT NULL,
+descricao TEXT,
+tipo TEXT,
+preco TEXT
+);
+
+ 

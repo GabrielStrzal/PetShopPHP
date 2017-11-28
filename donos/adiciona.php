@@ -17,31 +17,31 @@ include_once("donos_menu.php");
 <br>
 
 	<div class="container">
-		<div class="col-md-12">
+		<br>
+			<div class="col-md-6 container panel panel-default ">
 
-<br/>
+				<h3>Cadastro de Donos</h3>
+				<br/>
 
-	<form action="add.php" method="post" name="form1">
-		<table width="25%" border="0">
-			<tr> 
-				<td>Nome</td>
-				<td><input type="text" name="nome"></td>
-			</tr>
-			<tr> 
-				<td>Endereço</td>
-				<td><input type="text" name="endereco"></td>
-			</tr>
-			<tr> 
-				<td>Telefone</td>
-				<td><input type="text" name="telefone"></td>
-			</tr>
-			<tr> 
-				<td></td>
-				<td><input type="submit" name="Submit" value="Adicionar"></td>
-			</tr>
-		</table>
-	</form>
-	</div>
+				<form action="add.php" method="post" name="form1">
+					<div class="form-group">
+						<label for="nome">Nome</label>
+					 	<input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
+			  		</div>
+					<div class="form-group">
+						<label for="endereco">Endereço</label>
+					 	<input type="text" class="form-control" name="endereco" id="endereco" placeholder="Endereco">
+			  		</div>		
+					<div class="form-group">
+						<label for="telefone">Telefone</label>
+					 	<input type="text" class="form-control" name="telefone" id="telefone" placeholder="telefone">
+			  		</div>	
+					<button type="submit" class="btn btn-success tn-lg btn-block" name="Submit" value="Adicionar">Adicionar</button>
+				</form>
+				<br/>
+			</div>
+		</div>
+		
 	</div>
 </body>
 </html>

@@ -27,12 +27,12 @@
 						<li><a href="../pets/pets.php">Listar Pets</a></li>
 					</ul>
 				</li>
-				<li class="dropdown active"><a href="#" class="dropdown-toggle"
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">Donos <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="adiciona.php">Cadastro de Donos</a></li>
-						<li><a href="donos.php">Lista</a></li>
+						<li><a href="../donos/adiciona.php">Cadastro de Donos</a></li>
+						<li><a href="../donos/donos.php">Lista</a></li>
 					</ul>
 				</li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
@@ -43,13 +43,13 @@
 						<li><a href="../users/usuarios.php">Lista de Usuários</a></li>
 					</ul>
 				</li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
+				<li class="dropdown active"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">Serviços <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li class="dropdown-header">Atendimento Médico</li>
-						<li><a href="../atendimentomedico/adiciona.php">Cadastrar</a></li>
-						<li><a href="../atendimentomedico/atendimentomedico.php">Listar</a></li>
+						<li><a href="adiciona.php">Cadastrar</a></li>
+						<li><a href="atendimentomedico.php">Listar</a></li>
 						 <li class="divider"></li>
 						 <li class="dropdown-header">Atendimento Cosmético</li>
 						<li><a href="../atendimentocos/adiciona.php">Cadastrar</a></li>

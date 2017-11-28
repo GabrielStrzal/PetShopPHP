@@ -27,12 +27,12 @@
 						<li><a href="../pets/pets.php">Listar Pets</a></li>
 					</ul>
 				</li>
-				<li class="dropdown active"><a href="#" class="dropdown-toggle"
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">Donos <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="adiciona.php">Cadastro de Donos</a></li>
-						<li><a href="donos.php">Lista</a></li>
+						<li><a href="../donos/adiciona.php">Cadastro de Donos</a></li>
+						<li><a href="../donos/donos.php">Lista</a></li>
 					</ul>
 				</li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
@@ -43,7 +43,7 @@
 						<li><a href="../users/usuarios.php">Lista de Usuários</a></li>
 					</ul>
 				</li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
+				<li class="dropdown active"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">Serviços <span class="caret"></span></a>
 					<ul class="dropdown-menu">
@@ -56,8 +56,8 @@
 						<li><a href="../atendimentocos/atendimentocos.php">Listar</a></li>
 						 <li class="divider"></li>
 						 <li class="dropdown-header">Serviços</li>
-						<li><a href="../servicos/adiciona.php">Cadastrar</a></li>
-						<li><a href="../servicos/servicos.php">Listar</a></li>
+						<li><a href="adiciona.php">Cadastrar</a></li>
+						<li><a href="servicos.php">Listar</a></li>
 					</ul>
 				</li>
 			</ul>

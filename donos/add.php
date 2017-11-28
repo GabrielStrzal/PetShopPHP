@@ -44,7 +44,7 @@ if(isset($_POST['Submit'])) {
 		}
 		
 		//link to the previous page
-		echo "<br/><a href='javascript:self.history.back();'>Voltar</a>";
+		echo "<br/><a href='javascript:self.history.back();' class='btn btn-warning'>Voltar</a>";
 	} else { 
 		// if all the fields are filled (not empty) 
 			
@@ -52,8 +52,8 @@ if(isset($_POST['Submit'])) {
 		$result = mysqli_query($mysqli, "INSERT INTO donos(nome,endereco,telefone) VALUES('$nome','$endereco','$telefone')");
 		
 		//display success message
-		echo "<font color='green'>Adicionado com Sucesso.";
-		echo "<br/><a href='donos.php'>Ver resultados</a>";
+		echo "<a href='#' class='btn btn-block btn-success disabled'>Adicionado com Sucesso.</a>";
+		echo "<br/><a href='donos.php' class='btn btn-primary'>Ver resultados</a>";
 	}
 }
 ?>

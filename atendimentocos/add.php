@@ -2,7 +2,7 @@
 // including the header file
 include_once("../header.php");
 ?> 
-	<title>Adicionar Pet</title>
+	<title>Adicionar Atendimento Cosmético</title>
 </head>
 
 <body>
@@ -10,7 +10,7 @@ include_once("../header.php");
 
 <?php
 // including the menu file
-include_once("pets_menu.php");
+include_once("atendimentocos_menu.php");
 ?>
 
 <br><br><br>
@@ -62,7 +62,7 @@ if(isset($_POST['Submit'])) {
 		
 		//display success message
 		echo "<a href='#' class='btn btn-block btn-success disabled'>Adicionado com Sucesso.</a>";
-		echo "<br/><a href='pets.php' class='btn btn-primary'>Ver resultados</a>";
+		echo "<br/><a href='atendimentocos.php' class='btn btn-primary'>Ver resultados</a>";
 	}
 }
 ?>
