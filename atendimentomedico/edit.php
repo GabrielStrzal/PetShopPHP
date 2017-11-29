@@ -7,36 +7,30 @@ if(isset($_POST['update']))
 
 	$id = mysqli_real_escape_string($mysqli, $_POST['id']);
 	
-	$nome = mysqli_real_escape_string($mysqli, $_POST['nome']);
-	$descricao = mysqli_real_escape_string($mysqli, $_POST['descricao']);
+	$pet = mysqli_real_escape_string($mysqli, $_POST['pet']);
 	$tipo = mysqli_real_escape_string($mysqli, $_POST['tipo']);	
-	$dono = mysqli_real_escape_string($mysqli, $_POST['dono']);
-	$sexo = mysqli_real_escape_string($mysqli, $_POST['sexo']);
+	$observacoes = mysqli_real_escape_string($mysqli, $_POST['observacoes']);
+	$parecer = mysqli_real_escape_string($mysqli, $_POST['parecer']);
+	
 	
 	// checking empty fields
-	if(empty($nome) || empty($descricao) || empty($tipo) || empty($dono) || empty($sexo)) {	
+	if(empty($pet) || empty($tipo) || empty($parecer)) {	
 			
-		if(empty($nome)) {
-			echo "<font color='red'>Campo Nome está vazio.</font><br/>";
-		}
-		
-		if(empty($descricao)) {
-			echo "<font color='red'>Campo Descrição está vazio.</font><br/>";
+		if(empty($pet)) {
+			echo "<font color='red'>Campo Pet está vazio.</font><br/>";
 		}
 		
 		if(empty($tipo)) {
 			echo "<font color='red'>Campo Tipo está vazio.</font><br/>";
 		}
 
-		if(empty($dono)) {
-			echo "<font color='red'>Campo Dono está vazio.</font><br/>";
-		}	
-		if(empty($sexo)) {
-			echo "<font color='red'>Campo Sexo está vazio.</font><br/>";
+		if(empty($parecer)) {
+			echo "<font color='red'>Campo Parecer está vazio.</font><br/>";
 		}
+
 	} else {	
 		//updating the table
-		$result = mysqli_query($mysqli, "UPDATE pets SET nome='$nome',descricao='$descricao',tipo='$tipo',dono='$dono', sexo='$sexo' WHERE id=$id");
+		$result = mysqli_query($mysqli, "UPDATE atendimentos SET pet='$pet',observacoes='$observacoes',tipo='$tipo',parecer='$parecer',situacao='CONCLUIDO' WHERE id=$id");
 		
 		//redirectig to the display page. In our case, it is index.php
 		header("Location: atendimentomedico.php");
@@ -48,23 +42,23 @@ if(isset($_POST['update']))
 $id = $_GET['id'];
 
 //selecting data associated with this particular id
-$result = mysqli_query($mysqli, "SELECT * FROM pets WHERE id=$id");
-$result_donos = mysqli_query($mysqli, "SELECT * FROM donos ORDER BY id DESC");
+$result = mysqli_query($mysqli, "SELECT * FROM atendimentos WHERE id=$id");
+$result_pets = mysqli_query($mysqli, "SELECT * FROM pets ORDER BY id DESC");
+$result_servicos = mysqli_query($mysqli, "SELECT * FROM servicos ORDER BY id DESC");
 
 while($res = mysqli_fetch_array($result))
 {
-	$nome = $res['nome'];
-	$descricao = $res['descricao'];
+	$pet = $res['pet'];
 	$tipo = $res['tipo'];
-	$dono = $res['dono'];
-	$sexo = $res['sexo'];
+	$observacoes = $res['observacoes'];
+	$parecer = $res['parecer'];
 }
 ?>
 <?php
 // including the header file
 include_once("../header.php");
 ?> 
-	<title>Editar Pet</title>
+	<title>Atender Serviço</title>
 </head>
 
 <body>
@@ -75,70 +69,45 @@ include_once("atendimentomedico_menu.php");
 
 <br><br><br>
 
+<div class="container">
+		<br>
+			<div class="col-md-6 container panel panel-default ">
 
-	<div class="container">
-		<div class="col-md-12">
-
-	<br/>
+				<h3>Atender Serviço</h3>
+				<br/>
 	
-	<form name="form1" method="post" action="edit.php">
-		<table border="0">
-			<tr> 
-				<td>Nome</td>
-				<td><input type="text" name="nome" value="<?php echo $nome;?>"></td>
-			</tr>
-			<tr> 
-				<td>Descrição</td>
-				<td><input type="text" name="descricao" value="<?php echo $descricao;?>"></td>
-			</tr>
-			<tr> 
-				<td>Tipo</td>
-				<td>
-					<select name="tipo">
-				  		<option value="<?php echo $tipo;?>"><?php echo $tipo;?></option>
-				  		<option value="Cachorro">Cachorro</option>
-				  		<option value="Gato">Gato</option>
-				  		<option value="Outro">Outro</option>
-					</select>
-				</td>
-			</tr>
-			<tr> 
-				<td>Sexo</td>
-				<td>
-					<select name="sexo">
-				  		<option value="<?php echo $sexo;?>"><?php echo $sexo;?></option>
-				  		<option value="Macho">Macho</option>
-				  		<option value="Fêmea">Fêmea</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td>Dono</td>
-			<td>
-				<select name="dono">
-				
-				<?php
-					$row = mysqli_fetch_assoc(mysqli_query($mysqli, "SELECT nome FROM donos WHERE id = $dono "));
-				?>
+				<form name="form1" method="post" action="edit.php">
+					<div class="form-group">
+						<label for="pet">Pet</label>
+					 	<select name="pet" id="pet" class="form-control" readonly>
+					  		<?php $row = mysqli_fetch_assoc(mysqli_query($mysqli, "SELECT * FROM pets WHERE id = $pet")); ?>
+					  		<option value="<?php echo $pet;?>"><?php echo $row['nome'];?></option>
+						</select>
+			  		</div>
+					<div class="form-group">
+						<label for="tipo">Serviço</label>
+						<select name="tipo" id="tipo" class="form-control" readonly>
+					  		<?php $row = mysqli_fetch_assoc(mysqli_query($mysqli, "SELECT * FROM servicos WHERE id = $tipo")); ?>
+					  		<option value="<?php echo $tipo;?>"><?php echo $row['nome'];?></option>
+						</select>
+			  		</div>	
 
-				<option value="<?php echo $dono;?>"><?php echo $row['nome'];?></option>
+					<div class="form-group">
+						<label for="observacoes">Observações</label>
+					 	<input type="text" class="form-control" name="observacoes" id="observacoes" value="<?php echo $observacoes;?>">
+			  		</div>
 
-					<?php 
-						while($res = mysqli_fetch_array($result_donos)) { 		
-							echo "<option value=".$res['id'].">".$res['nome']."</option>";	
-						}
-					?>
-				</select>
-			</td>
+			  		<div class="form-group">
+						<label for="parecer">Parecer</label>
+						<textarea class="form-control" rows="5" name="parecer" id="parecer"><?php echo $parecer;?></textarea>
+			  		</div>
 
-			</tr>
-
-			<tr>
-				<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
-				<td><input type="submit" name="update" value="Atualizar"></td>
+				<input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
+				<input type="submit" name="update" class="btn btn-success tn-lg btn-block"  value="Finalizar">
 			</tr>
 		</table>
 	</form>
+	<br>
 	</div>
 	</div>
 </body>

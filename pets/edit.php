@@ -79,7 +79,7 @@ include_once("pets_menu.php");
 		<br>
 			<div class="col-md-6 container panel panel-default ">
 
-				<h3>Edita Pet</h3>
+				<h3>Editar Pet</h3>
 				<br/>
 	
 				<form name="form1" method="post" action="edit.php">

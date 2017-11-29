@@ -41,23 +41,25 @@
 					<ul class="dropdown-menu">
 						<li><a href="../users/adiciona.php">Cadastro de Usuários</a></li>
 						<li><a href="../users/usuarios.php">Lista de Usuários</a></li>
+						<li class="divider"></li>
+						<li class="dropdown-header">Serviços</li>
+						<li><a href="../servicos/adiciona.php">Cadastrar</a></li>
+						<li><a href="../servicos/servicos.php">Listar</a></li>
 					</ul>
 				</li>
 				<li class="dropdown active"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
-					aria-expanded="false">Serviços <span class="caret"></span></a>
+					aria-expanded="false">Atendimentos<span class="caret"></span></a>
 					<ul class="dropdown-menu">
+						<li class="dropdown-header">Atendimento</li>
+						<li><a href="../atendimentos/adiciona.php">Cadastrar</a></li>
+						<li><a href="../atendimentos/atendimentos.php">Listar Todos</a></li>
+						<li class="divider"></li>
 						<li class="dropdown-header">Atendimento Médico</li>
-						<li><a href="../atendimentomedico/adiciona.php">Cadastrar</a></li>
-						<li><a href="../atendimentomedico/atendimentomedico.php">Listar</a></li>
-						 <li class="divider"></li>
-						 <li class="dropdown-header">Atendimento Cosmético</li>
-						<li><a href="adiciona.php">Cadastrar</a></li>
-						<li><a href="atendimentocos.php">Listar</a></li>
-						 <li class="divider"></li>
-						 <li class="dropdown-header">Serviços</li>
-						<li><a href="../servicos/adiciona.php">Cadastrar</a></li>
-						<li><a href="../servicos/servicos.php">Listar</a></li>
+						<li><a href="../atendimentomedico/atendimentomedico.php">Listar/Atender</a></li>
+						<li class="divider"></li>
+						<li class="dropdown-header">Atendimento Cosmético</li>
+						<li><a href="atendimentocos.php">Listar/Atender</a></li>
 					</ul>
 				</li>
 			</ul>

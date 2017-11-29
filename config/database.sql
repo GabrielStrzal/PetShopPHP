@@ -49,4 +49,16 @@ tipo TEXT,
 preco TEXT
 );
 
+
+DROP TABLE IF EXISTS `atendimentos`;
+
+CREATE TABLE atendimentos (
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+pet INTEGER,
+tipo INTEGER,
+observacoes TEXT,
+parecer TEXT,
+situacao TEXT
+);
+
  

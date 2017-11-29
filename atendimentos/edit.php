@@ -23,13 +23,12 @@ if(isset($_POST['update']))
 			echo "<font color='red'>Campo Tipo está vazio.</font><br/>";
 		}
 
-
 	} else {	
 		//updating the table
-		$result = mysqli_query($mysqli, "UPDATE atendimentos SET pet='$pet',observacoes='$observacoes',tipo='$tipo',situacao='CONCLUIDO' WHERE id=$id");
+		$result = mysqli_query($mysqli, "UPDATE atendimentos SET pet='$pet',observacoes='$observacoes',tipo='$tipo' WHERE id=$id");
 		
 		//redirectig to the display page. In our case, it is index.php
-		header("Location: atendimentocos.php");
+		header("Location: atendimentos.php");
 	}
 }
 ?>
@@ -53,13 +52,13 @@ while($res = mysqli_fetch_array($result))
 // including the header file
 include_once("../header.php");
 ?> 
-	<title>Atender Serviço</title>
+	<title>Editar Atendimento</title>
 </head>
 
 <body>
 <?php
 // including the menu file
-include_once("atendimentocos_menu.php");
+include_once("atendimentos_menu.php");
 ?>
 
 <br><br><br>
@@ -68,22 +67,33 @@ include_once("atendimentocos_menu.php");
 		<br>
 			<div class="col-md-6 container panel panel-default ">
 
-				<h3>Atender Serviço</h3>
+				<h3>Editar Atendimento</h3>
 				<br/>
 	
 				<form name="form1" method="post" action="edit.php">
 					<div class="form-group">
 						<label for="pet">Pet</label>
-					 	<select name="pet" id="pet" class="form-control" readonly>
+					 	<select name="pet" id="pet" class="form-control">
 					  		<?php $row = mysqli_fetch_assoc(mysqli_query($mysqli, "SELECT * FROM pets WHERE id = $pet")); ?>
 					  		<option value="<?php echo $pet;?>"><?php echo $row['nome'];?></option>
+					  		<?php 
+								while($res = mysqli_fetch_array($result_pets)) { 		
+								echo "<option value=".$res['id'].">".$res['nome']."</option>";	
+							}
+							?>
 						</select>
 			  		</div>
 					<div class="form-group">
 						<label for="tipo">Serviço</label>
-						<select name="tipo" id="tipo" class="form-control" readonly>
+						<select name="tipo" id="tipo" class="form-control">
 					  		<?php $row = mysqli_fetch_assoc(mysqli_query($mysqli, "SELECT * FROM servicos WHERE id = $tipo")); ?>
 					  		<option value="<?php echo $tipo;?>"><?php echo $row['nome'];?></option>
+					  		<?php 
+								while($res = mysqli_fetch_array($result_servicos)) { 		
+								echo "<option value=".$res['id'].">".$res['nome']."</option>";	
+							}
+							?>
+
 						</select>
 			  		</div>	
 
@@ -93,7 +103,7 @@ include_once("atendimentocos_menu.php");
 			  		</div>
 
 				<input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
-				<input type="submit" name="update" class="btn btn-success tn-lg btn-block"  value="Finalizar">
+				<input type="submit" name="update" class="btn btn-success tn-lg btn-block"  value="Atualizar">
 			</tr>
 		</table>
 	</form>
